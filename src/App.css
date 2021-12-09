@@ -1,8 +1,15 @@
 .App{
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: repeat;
+    background-color: #eeee;
     padding-top: 4rem;
     min-height: 100vh;
+    scroll-behavior: smooth;
 }
 
 .navbar{
-    background-color:#ef5350 !important;
+    background:rgba(255, 255, 255, 0.25) !important;
+    border-radius: 2px;
+    backdrop-filter: blur(6px);
 }
