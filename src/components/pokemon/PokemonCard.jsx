@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import styled from 'styled-components';
 import loading from '../pokemon/loading.gif'
+import {Link} from 'react-router-dom'
 
 const Sprite = styled.img`
     width: 5em;
@@ -11,14 +12,30 @@ const Sprite = styled.img`
 const Card = styled.div`
     box-shadow: 10px 10px 29px -15px rgba(0,0,0,0.26);
     transition: all 0.5s cubic-bezier(0.25, 0.8, 0.25, 1);
+    border: 2px solid #C81D25;
+    border-radius: 10px 20px 0px 10px !important;
     &:hover {
-        box-shadow: 10px 10px 29px -15px rgba(0,0,0,0.53);
-        border: 2px solid #C81D25;
+        box-shadow: 10px 10px 29px -15px rgba(0,0,0,0.93);
+        color: #C81D25;
     }
     -moz-user-select:none;
     -website-user-select:none;
     user-select:none;
     -o-user-select:none
+`;
+
+const StyledLink = styled(Link)`
+    text-decoration:none;
+    color:black;
+    &:focus,
+    &:hover {
+     color:#C81D25;
+    },
+    &:visited,
+    &:link,
+    &:active {
+     text-decoration: none;
+  }
 `;
 
 export default class PokemonCard extends Component {
@@ -46,7 +63,7 @@ export default class PokemonCard extends Component {
         return (
             <div className='col-md-3 col-sm-6 mb-5'>
                 <Card className="card">
-                    <h5 className="card-header">{this.state.pokedexId}</h5>
+                    <h5 className="card-header">#{this.state.pokedexId}</h5>
                     {this.state.imageLoading ?(
                         <img
                         src={loading}

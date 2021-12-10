@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import styled from 'styled-components';
+import reactdex from '../layout/reactdex.png'
 
 export default class NavBar extends Component {
     render() {
@@ -8,11 +8,13 @@ export default class NavBar extends Component {
                <nav className="navbar navbar-expand-md navbar-dark fixed-top"
                style={{height: '5em'}}
                >
-              <p className='navbar-brand col-sm-3 col-md-2 mr-0 align-items-center'
-              style={{color:'black', marginLeft:'2rem'}}
-              >
-              ReactDex
-              </p>
+            <>
+            <img
+              style={{marginLeft:'2rem', marginTop:'1rem', width:"15rem"}}
+              src={reactdex}
+              alt='ReactDex'
+              />
+            </>
               </nav>
             </div>
         )
